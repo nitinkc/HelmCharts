@@ -49,14 +49,3 @@ Selector labels
 app.kubernetes.io/name: {{ include "todo-app.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "todo-app.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "todo-app.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
-{{- end }}
