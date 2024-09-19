@@ -3,7 +3,7 @@ entries:
   my-first-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-18T21:27:08.43683-06:00"
+    created: "2024-09-18T21:37:12.606534-06:00"
     description: A Helm chart for Kubernetes
     digest: 469181eb422eaa584624434537c78ef260c06babb71409363dab942f6f7fa148
     name: my-first-chart
@@ -14,12 +14,12 @@ entries:
   todo-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-18T21:27:08.437409-06:00"
+    created: "2024-09-18T21:37:12.607331-06:00"
     description: A Helm chart for Kubernetes
-    digest: 90c92d4e9dfee7ebcc8a6b0f30248394c6b3c99bcec9b66c232112c442aacb9e
+    digest: 1e2f63428eab91cd4f3e598853156f2d673b88e199f9cdb10a891b71202354e4
     name: todo-app
     type: application
     urls:
     - todo-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-18T21:27:08.435748-06:00"
+generated: "2024-09-18T21:37:12.6046-06:00"
