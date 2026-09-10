@@ -1,6 +1,6 @@
 # GitOps operations hands-on labs
 
-Run these only against the learning release. Capture conditions and events before recovery. The [GitOps operations solution](../solutions/week-4.md) contains expected evidence.
+Run these only against the learning release. Capture conditions and events before recovery. The [GitOps operations solution](../solutions/gitops-operations.md) contains expected evidence.
 
 ## Lab 4.1 — Create and observe drift
 

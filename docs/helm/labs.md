@@ -1,6 +1,6 @@
 # Advanced Helm and OCI labs
 
-Start in the repository root and verify the [environment](../getting-started/environment.md) and [GKE context](../getting-started/gke-connection.md). Try each task before opening the [Advanced Helm and OCI solution](../solutions/week-2.md).
+Start in the repository root and verify the [environment](../getting-started/environment.md) and [GKE context](../getting-started/gke-connection.md). Try each task before opening the [Advanced Helm and OCI solution](../solutions/helm-oci.md).
 
 ## Lab 2.1 — Render, install, upgrade, and roll back
 

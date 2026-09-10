@@ -1,6 +1,6 @@
 # Flux on GKE hands-on labs
 
-These commands have real side effects: Flux bootstrap writes to GitHub and installs cluster-wide controllers. Verify the cluster context first. Use the [Flux on GKE solution](../solutions/week-3.md) only after attempting the tasks.
+These commands have real side effects: Flux bootstrap writes to GitHub and installs cluster-wide controllers. Verify the cluster context first. Use the [Flux on GKE solution](../solutions/flux-gke.md) only after attempting the tasks.
 
 ## Lab 3.1 — Bootstrap Flux with GitHub
 
