@@ -1,36 +1,46 @@
-# HelmCharts
+# Helm + Flux GitOps Learning Path
 
-On the github Repo., under Settings -> Pages, Select
-- Build and deployment -> Deploy from a branch
-- branch  -> choose main -> /root
+A topic-based, hands-on curriculum for advanced Helm and Flux GitOps on an existing GKE cluster. The course uses the included `my-first-chart`, GitHub, private Google Artifact Registry, and GKE Workload Identity.
 
-This will allow it to be run as a server 
+## Curriculum
 
-## Create custom helm charts
-```shell
-helm create myFirstChart
-helm package myFirstChart
-helm repo index .
+The MkDocs site includes:
+
+- GitOps pull versus push and Flux controller architecture
+- Helm dependencies, hooks, tests, values precedence, and OCI packaging
+- Flux bootstrap for GitHub
+- Private Artifact Registry access without service-account keys
+- `OCIRepository` and `HelmRelease` reconciliation
+- Drift, failure, remediation, suspend/resume, quizzes, and readiness gates
+- Separate solutions, troubleshooting, command reference, and cleanup
+- Helm templating, schema, atomic lifecycle, security, and render-matrix deep dives
+- Flux dependencies, `valuesFrom`, pruning, drift rules, RBAC, and secret-design labs
+- Forty interview questions, ten scenario drills, and a portfolio capstone
+
+The original source plan is retained in [Helm_Flux_GitOps_Plan.md](Helm_Flux_GitOps_Plan.md).
+
+## Run the documentation locally
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+mkdocs serve
 ```
 
-## Update
+Open <http://127.0.0.1:8000>.
 
-### Test updates
-Upgrade test on local
-```shell
-helm upgrade --install todo-service-app myrepo/todo-app -f values.yaml 
+## Validate the site
+
+```bash
+mkdocs build --strict
 ```
 
-### After Testing
-**After helm file changes**
-```shell
-helm package todo-app
-helm repo index . 
+## Existing charts
 
-# After Git push
-helm repo update 
-```
-**Upgrade pod**
-```shell
-helm upgrade --install todo-service-app myrepo/todo-app
-```
+- `my-first-chart/` is the progressive lab chart.
+- `todo-app/` remains available as an additional example.
+- Existing packaged `.tgz` files and `index.yaml` are legacy chart-repository artifacts; the curriculum teaches OCI publication to Artifact Registry.
+
+Start with the [course home page](docs/index.md) and define your own GCP project, GKE cluster, location, Artifact Registry, and GitHub variables before running any lab command.

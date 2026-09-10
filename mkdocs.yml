@@ -1,0 +1,96 @@
+site_name: Helm + Flux GitOps Learning Path
+site_description: A topic-based, hands-on Helm and Flux curriculum for GKE
+repo_name: HelmCharts
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Roadmap: getting-started/roadmap.md
+      - Prerequisites: getting-started/prerequisites.md
+      - Environment variables: getting-started/environment.md
+      - Connect to GKE: getting-started/gke-connection.md
+  - GitOps Fundamentals:
+      - Concepts and architecture: week-1/concepts.md
+      - Hands-on labs: week-1/labs.md
+      - Knowledge check and Gate 1: week-1/assessment.md
+  - Advanced Helm and OCI:
+      - Helm concepts: week-2/concepts.md
+      - Hands-on labs: week-2/labs.md
+      - Knowledge check and Gate 2: week-2/assessment.md
+  - Flux on GKE:
+      - Integration concepts: week-3/concepts.md
+      - Hands-on labs: week-3/labs.md
+      - Knowledge check and Gate 3: week-3/assessment.md
+  - GitOps Operations:
+      - Drift and recovery: week-4/concepts.md
+      - Hands-on labs: week-4/labs.md
+      - Knowledge check and Gate 4: week-4/assessment.md
+  - Helm Deep Dive:
+      - Templating and scope: helm-deep-dive/templating.md
+      - Chart quality and security: helm-deep-dive/chart-quality.md
+      - Interview labs: helm-deep-dive/labs.md
+  - Flux Deep Dive:
+      - Reconciliation and release design: flux-deep-dive/reconciliation.md
+      - Interview labs: flux-deep-dive/labs.md
+  - Interview Preparation:
+      - Question bank: interview/question-bank.md
+      - Scenario drills: interview/scenario-drills.md
+      - Capstone: interview/capstone.md
+  - Solutions:
+      - GitOps fundamentals: solutions/week-1.md
+      - Advanced Helm and OCI: solutions/week-2.md
+      - Flux on GKE: solutions/week-3.md
+      - GitOps operations: solutions/week-4.md
+  - Reference:
+      - Command cheat sheet: reference/commands.md
+      - Troubleshooting: reference/troubleshooting.md
+      - Glossary: reference/glossary.md
+      - Cleanup: reference/cleanup.md
