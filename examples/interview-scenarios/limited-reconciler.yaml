@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: limited-reconciler
+  namespace: helm-flux-lab
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: limited-reconciler
+  namespace: helm-flux-lab
+rules:
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: limited-reconciler
+  namespace: helm-flux-lab
+subjects:
+  - kind: ServiceAccount
+    name: limited-reconciler
+    namespace: helm-flux-lab
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: limited-reconciler
