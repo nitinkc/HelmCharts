@@ -1,6 +1,6 @@
 # Interview question bank
 
-Answer aloud in 60–120 seconds. Use a concrete example and state trade-offs.
+Answer aloud in 60–120 seconds. Use a concrete example and state trade-offs. Grade yourself afterward with the [model answers](model-answers.md); do not read them first.
 
 ## Helm fundamentals
 

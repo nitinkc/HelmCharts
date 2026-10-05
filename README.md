@@ -15,7 +15,7 @@ The MkDocs site includes:
 - Separate solutions, troubleshooting, command reference, and cleanup
 - Helm templating, schema, atomic lifecycle, security, and render-matrix deep dives
 - Flux dependencies, `valuesFrom`, pruning, drift rules, RBAC, and secret-design labs
-- Forty interview questions, ten scenario drills, and a portfolio capstone
+- A scored self-assessment, forty interview questions with model answers, ten scenario drills with solutions, and a portfolio capstone
 
 The original source plan is retained in [Helm_Flux_GitOps_Plan.md](Helm_Flux_GitOps_Plan.md).
 

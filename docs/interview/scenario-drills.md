@@ -1,6 +1,6 @@
 # Scenario-based interview drills
 
-For each scenario, spend two minutes clarifying assumptions, five minutes diagnosing, and two minutes presenting a durable fix.
+For each scenario, spend two minutes clarifying assumptions, five minutes diagnosing, and two minutes presenting a durable fix. Compare your response with the [model solutions](scenario-solutions.md) only after finishing.
 
 ## Scenario 1 — Green source, red release
 

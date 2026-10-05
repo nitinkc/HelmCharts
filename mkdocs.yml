@@ -1,26 +1,38 @@
 site_name: Helm + Flux GitOps Learning Path
 site_description: A topic-based, hands-on Helm and Flux curriculum for GKE
-repo_name: HelmCharts
+repo_name: nitinkc/HelmCharts
+repo_url: https://github.com/nitinkc/HelmCharts
 
 theme:
   name: material
   features:
+      # Navigation
     - navigation.tabs
     - navigation.sections
-    - navigation.top
+    - navigation.expand
+    - navigation.path
+    - navigation.top           # Back-to-top button
+    - navigation.footer        # Prev/Next page links
+    # Search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Content
     - content.code.copy
-    - content.tabs.link
+    - content.code.annotate    # (1) style code annotations
+    - content.tabs.link        # Sync tabs across page
+    - content.tooltips
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: red
       accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: red
       accent: blue
       toggle:
         icon: material/brightness-4
@@ -49,6 +61,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocs_quiz
 
 nav:
   - Home: index.md
@@ -58,37 +71,38 @@ nav:
       - Environment variables: getting-started/environment.md
       - Connect to GKE: getting-started/gke-connection.md
   - GitOps Fundamentals:
-      - Concepts and architecture: week-1/concepts.md
-      - Hands-on labs: week-1/labs.md
-      - Knowledge check and Gate 1: week-1/assessment.md
-  - Advanced Helm and OCI:
-      - Helm concepts: week-2/concepts.md
-      - Hands-on labs: week-2/labs.md
-      - Knowledge check and Gate 2: week-2/assessment.md
-  - Flux on GKE:
-      - Integration concepts: week-3/concepts.md
-      - Hands-on labs: week-3/labs.md
-      - Knowledge check and Gate 3: week-3/assessment.md
+      - Concepts and architecture: fundamentals/concepts.md
+      - Hands-on labs: fundamentals/labs.md
+      - Knowledge check and Gate 1: fundamentals/assessment.md
+  - Helm and OCI:
+      - Core concepts: helm/concepts.md
+      - Core labs: helm/labs.md
+      - Templating and scope: helm/templating.md
+      - Chart quality and security: helm/chart-quality.md
+      - Interview labs: helm/interview-labs.md
+      - Knowledge check and Gate 2: helm/assessment.md
+  - Flux GitOps:
+      - GKE integration: flux/gke-integration.md
+      - GKE integration labs: flux/gke-labs.md
+      - Reconciliation and release design: flux/reconciliation.md
+      - Interview labs: flux/interview-labs.md
+      - Knowledge check and Gate 3: flux/assessment.md
   - GitOps Operations:
-      - Drift and recovery: week-4/concepts.md
-      - Hands-on labs: week-4/labs.md
-      - Knowledge check and Gate 4: week-4/assessment.md
-  - Helm Deep Dive:
-      - Templating and scope: helm-deep-dive/templating.md
-      - Chart quality and security: helm-deep-dive/chart-quality.md
-      - Interview labs: helm-deep-dive/labs.md
-  - Flux Deep Dive:
-      - Reconciliation and release design: flux-deep-dive/reconciliation.md
-      - Interview labs: flux-deep-dive/labs.md
+      - Drift and recovery: operations/concepts.md
+      - Hands-on labs: operations/labs.md
+      - Knowledge check and Gate 4: operations/assessment.md
   - Interview Preparation:
+      - Self-assessment quiz: interview/self-assessment.md
       - Question bank: interview/question-bank.md
+      - Question model answers: interview/model-answers.md
       - Scenario drills: interview/scenario-drills.md
+      - Scenario model solutions: interview/scenario-solutions.md
       - Capstone: interview/capstone.md
   - Solutions:
-      - GitOps fundamentals: solutions/week-1.md
-      - Advanced Helm and OCI: solutions/week-2.md
-      - Flux on GKE: solutions/week-3.md
-      - GitOps operations: solutions/week-4.md
+      - GitOps fundamentals: solutions/gitops-fundamentals.md
+      - Advanced Helm and OCI: solutions/helm-oci.md
+      - Flux on GKE: solutions/flux-gke.md
+      - GitOps operations: solutions/gitops-operations.md
   - Reference:
       - Command cheat sheet: reference/commands.md
       - Troubleshooting: reference/troubleshooting.md

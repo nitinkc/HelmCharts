@@ -31,4 +31,4 @@ Demonstrate from a clean namespace:
 
 **Pass:** all checks succeed and no credential file or token is committed.
 
-Proceed to [Flux on GKE](../week-3/concepts.md).
+Proceed to [Flux on GKE](../flux/gke-integration.md).

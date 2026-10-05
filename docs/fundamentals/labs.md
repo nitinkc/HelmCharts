@@ -1,6 +1,6 @@
 # GitOps fundamentals labs
 
-These labs are read-only. Write answers in your lab journal before checking the [GitOps fundamentals solution](../solutions/week-1.md).
+These labs are read-only. Write answers in your lab journal before checking the [GitOps fundamentals solution](../solutions/gitops-fundamentals.md).
 
 ## Lab 1.1 — Map push and pull delivery
 

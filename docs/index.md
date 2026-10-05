@@ -26,7 +26,8 @@ By the end, you will be able to:
 - compare Flux pull delivery with CI/CD push delivery;
 - debug Helm template scope, schema, atomic upgrades, and rollout behavior;
 - design Flux dependencies, values composition, pruning, drift rules, RBAC, and secret handling;
-- solve realistic interview scenarios and present a portfolio-ready capstone.
+- solve realistic interview scenarios and present a portfolio-ready capstone;
+- measure readiness with a scored quiz, model answers, and scenario solutions.
 
 ## Course format
 
@@ -38,7 +39,7 @@ Every topic follows the same loop:
 4. **Quiz** yourself without notes.
 5. **Pass a gate** before moving forward.
 
-Solutions are deliberately kept in a [separate section](solutions/week-1.md). Work through GitOps fundamentals, advanced Helm and OCI, Flux on GKE, and GitOps operations in sequence. Try each lab first, record the output you expected, and use the solution only after you can explain where you became stuck.
+Solutions are deliberately kept in a [separate section](solutions/gitops-fundamentals.md). Work through GitOps fundamentals, advanced Helm and OCI, Flux on GKE, and GitOps operations in sequence. Try each lab first, record the output you expected, and use the solution only after you can explain where you became stuck.
 
 !!! warning "Use a non-production cluster"
     The labs install controllers, create workloads, and deliberately introduce failures. Reuse your GKE learning cluster, not a production cluster. Always verify `kubectl config current-context` before a mutating command.

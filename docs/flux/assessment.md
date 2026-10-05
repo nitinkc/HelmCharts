@@ -31,4 +31,4 @@ Make a new Git commit that changes only Helm values. Without invoking `helm inst
 
 **Pass:** automatic reconciliation succeeds and you can explain every credential boundary.
 
-Proceed to [GitOps operations](../week-4/concepts.md).
+Proceed to [GitOps operations](../operations/concepts.md).

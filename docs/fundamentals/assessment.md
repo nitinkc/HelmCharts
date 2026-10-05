@@ -30,4 +30,4 @@ Without notes, in five minutes:
 - **Pass:** correct direction of control, all controller responsibilities, and a clear distinction between desired/observed state.
 - **Retry:** treats Flux as a CI runner, confuses `kustomize-controller` with `helm-controller`, or cannot identify the evidence of reconciliation.
 
-Continue to [Advanced Helm and OCI](../week-2/concepts.md) only after passing.
+Continue to [Advanced Helm and OCI](../helm/concepts.md) only after passing.
