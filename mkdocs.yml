@@ -79,6 +79,7 @@ nav:
       - Core labs: helm/labs.md
       - Templating and scope: helm/templating.md
       - Chart quality and security: helm/chart-quality.md
+      - Testing and promotion: helm/testing-and-promotion.md
       - Interview labs: helm/interview-labs.md
       - Knowledge check and Gate 2: helm/assessment.md
   - Flux GitOps:

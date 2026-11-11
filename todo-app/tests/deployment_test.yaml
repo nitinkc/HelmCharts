@@ -1,0 +1,55 @@
+# helm-unittest suite — run: helm unittest todo-app/
+# Docs: https://github.com/helm-unittest/helm-unittest
+suite: deployment rendering
+templates:
+  - deployment.yaml
+tests:
+  - it: renders a Deployment with default values
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.replicas
+          value: 1
+      - matchLabels:
+          path: spec.selector.matchLabels
+          labels:
+            app.kubernetes.io/name: todo-app
+
+  - it: uses chart appVersion when image.tag is empty
+    set:
+      image.tag: null
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].image
+          value: "nitinkc/todo-app:1.16.0"
+
+  - it: omits replicas when autoscaling is enabled
+    set:
+      autoscaling.enabled: true
+      replicaCount: 5
+    asserts:
+      - notExists:
+          path: spec.replicas
+
+  - it: wires health probes to the service targetPort
+    set:
+      service.targetPort: 9090
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].livenessProbe.httpGet.port
+          value: tomcat
+      - equal:
+          path: spec.template.spec.containers[0].livenessProbe.httpGet.path
+          value: /actuator/health
+      - equal:
+          path: spec.template.spec.containers[0].ports[0].containerPort
+          value: 9090
+
+  - it: never ships :latest to prod — documents the values contract
+    set:
+      image.tag: "0.9.7"
+    asserts:
+      - matchRegex:
+          path: spec.template.spec.containers[0].image
+          pattern: ":0\\.9\\.7$"
